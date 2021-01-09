@@ -22,7 +22,7 @@ func main() {
 		fmt.Printf("%s -> %s\n", k, v)
 	}
 	//range也可以用来枚举Unicode字符串。第一个参数是字符的索引，第二个是字符（Unicode的值）本身。
-	for i, c := range "go" {
+	for i, c := range "go中文" {
 		fmt.Println(i, c)
 	}
 }
