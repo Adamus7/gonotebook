@@ -6,7 +6,8 @@ import (
 )
 
 func f(from string) {
-	for i := 0; i < 100; i++ {
+	for i := 0; i < 6; i++ {
+		time.Sleep(time.Second)
 		fmt.Println(from, ":", i)
 	}
 }
@@ -19,11 +20,12 @@ func main() {
 
 	go func(msg string) {
 		// fmt.Println(msg)
-		for i := 0; i < 100; i++ {
+		for i := 0; i < 3; i++ {
+			time.Sleep(time.Second)
 			fmt.Println(msg, ":", i)
 		}
 	}("going")
 
-	time.Sleep(time.Second)
+	time.Sleep(time.Second * 5)
 	fmt.Println("done")
 }
